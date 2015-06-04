@@ -6,3 +6,4 @@ out
 gen
 
 linters/*/node_modules/
+testers/*/node_modules/
