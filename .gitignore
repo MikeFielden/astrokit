@@ -5,3 +5,4 @@
 out
 gen
 
+linters/*/node_modules/

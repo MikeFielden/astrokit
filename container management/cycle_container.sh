@@ -2,7 +2,7 @@
 CONTAINER_LOCATION="$1"
 
 # Split on the forward slash
-# E.g. => 'mridevteam/express-container'
+# E.g. => 'mridevteam/express-container management'
 IFS='/' read -ra arrContainerInformation <<< "$CONTAINER_LOCATION"
 CONTAINER_NAME=${arrContainerInformation[1]}
 
@@ -12,18 +12,18 @@ echo "pulling latest image from $CONTAINER_LOCATION"
 docker pull "$CONTAINER_LOCATION":latest
 
 echo "_____________________________________________"
-# Stop the running container
+# Stop the running container management
 echo "stopping container named $CONTAINER_NAME"
 docker stop ${CONTAINER_NAME}
 
 echo "_____________________________________________"
-# Remove the now stopped container
-# NOTE: Without this step we cant name the container the same
+# Remove the now stopped container management
+# NOTE: Without this step we cant name the container management the same
 echo "removing container named $CONTAINER_NAME"
 docker rm ${CONTAINER_NAME}
 
 echo "_____________________________________________"
-# Remove the image that was attached to this container
+# Remove the image that was attached to this container management
 echo "removing image"
 docker rmi ${CONTAINER_LOCATION}:current
 
@@ -34,6 +34,6 @@ echo "tagging :latest as :current"
 docker tag ${CONTAINER_LOCATION}:latest ${CONTAINER_LOCATION}:current
 
 echo "_____________________________________________"
-# Fire up the new container
+# Fire up the new container management
 echo "starting new container"
 docker run -d --name ${CONTAINER_NAME} ${CONTAINER_LOCATION}:latest
