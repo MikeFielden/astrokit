@@ -1,0 +1,26 @@
+{
+  "name": "astro_transpilers_sass",
+  "version": "1.0.0",
+  "description": "Uses lib-sass to transform scss=>css",
+  "main": "gulpfile.js",
+  "scripts": {
+    "sass": "gulp"
+  },
+  "keywords": [
+    "test",
+    "mocha",
+    "gulp"
+  ],
+  "author": "Mike Fielden",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-size": "^1.2.1",
+    "gulp-util": "~3.0.5"
+  }
+}
