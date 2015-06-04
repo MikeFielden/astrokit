@@ -1,0 +1,26 @@
+{
+  "name": "astro_test_mocha",
+  "version": "1.0.0",
+  "description": "Uses mocha to test your javascript",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "test",
+    "mocha",
+    "gulp"
+  ],
+  "author": "Colln Estes",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.4.7",
+    "chai": "^2.3.0",
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-mocha": "^2.1.0",
+    "gulp-util": "^3.0.5",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
+  }
+}
