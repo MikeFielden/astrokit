@@ -8,4 +8,4 @@ WORKDIR /src/astro_code
 
 RUN npm install
 
-ENTRYPOINT ["bash", "-c", "npm test"]
+ENTRYPOINT ["bash", "-c", "npm run transpile"]
