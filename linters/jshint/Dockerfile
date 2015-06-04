@@ -1,4 +1,4 @@
-FROM nodesource/node:jessie
+FROM node:0.12
 
 RUN npm install gulp -g
 
