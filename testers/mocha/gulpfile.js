@@ -24,6 +24,8 @@ gulp.task('default', function () {
      **/
     require('babel/register')({ modules: 'common' });
     return gulp.src(['./setup/node.js', '../app/test/**/*.js'], {read: false})
+    .pipe(plugins.filelog())
     .pipe(plugins.mocha({reporter: 'spec', globals: globals}))
-    .on('error', plugins.util.log);
+    .on('error', plugins.util.log)
+    .pipe(plugins.duration('testing server files...'));
 });
