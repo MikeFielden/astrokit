@@ -1,0 +1,23 @@
+{
+  "name": "astro_transform_image_min",
+  "version": "1.0.0",
+  "description": "Uses imagemin to shrink your images",
+  "main": "gulpfile.js",
+  "scripts": {
+    "min_img": "gulp"
+  },
+  "keywords": [
+    "imagemin",
+    "gulp"
+  ],
+  "author": "Mike Fielden",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-duration": "0.0.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-filelog": "^0.4.1",
+    "gulp-util": "^3.0.5"
+  }
+}
