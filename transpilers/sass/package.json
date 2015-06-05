@@ -7,8 +7,9 @@
     "sass": "gulp"
   },
   "keywords": [
-    "test",
-    "mocha",
+    "sass",
+    "gulp-sass",
+    "node-sass",
     "gulp"
   ],
   "author": "Mike Fielden",

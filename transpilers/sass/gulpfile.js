@@ -40,8 +40,8 @@ gulp.task('default', function () {
      *            /dist
      *              /css
      *                // OUTPUT GOES HERE
-     *              /sass
-     *                // LOOKS IN HERE FOR SASS
+     *            /sass
+     *             // LOOKS IN HERE FOR SASS
      *      /astro_code
      *          THIS PROJECT
      *              Dockerfile
