@@ -46,13 +46,17 @@ gulp.task('default', function () {
 
 gulp.task('babel-server', function() {
   return gulp.src(['../app/app/**/*.js'])
+  .pipe(plugins.filelog())
   .pipe(plugins.babel())
-  .pipe(gulp.dest('../app/dist'));
+  .pipe(gulp.dest('../app/dist'))
+  .pipe(plugins.duration('Babel-ing server files...'));
 });
 
 gulp.task('babel-client', function () {
     return gulp.src(['../app/public/js/**/*.js'])
+    .pipe(plugins.filelog())
     .pipe(plugins.babel())
-    .pipe(gulp.dest('../app/public/dist/js'));
+    .pipe(gulp.dest('../app/public/dist/js'))
+    .pipe(plugins.duration('Babel-ing client files...'));
 });
 

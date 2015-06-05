@@ -17,6 +17,8 @@
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
     "gulp-load-plugins": "^0.10.0",
+    "gulp-duration": "0.0.0",
+    "gulp-filelog": "^0.4.1",
     "gulp-util": "^3.0.5",
     "run-sequence": "^1.1.0",
     "yargs": "^3.10.0"
