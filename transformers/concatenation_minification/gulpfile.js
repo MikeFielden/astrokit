@@ -14,11 +14,11 @@ var paths = {
 };
 
 var assets = {
-  img: 'images/'
+  js: 'js/'
 };
 
 var files = {
-  all: '**/*.*'
+  js: '**/*.js'
 };
 
 /**
@@ -27,10 +27,10 @@ var files = {
  *  /src
  *      /public
  *        /dist
- *          /images
- *          // OUTPUT OF IMAGES GO HERE
- *        /images
- *              // LOOKS IN HERE FOR IMAGES
+ *          /js
+ *            // OUTPUT OF CONCAT AND MIN GO HERE
+ *        /js
+ *          // LOOKS IN HERE FOR JS TO CONCAT/MIN
  *      /astro_code
  *          THIS PROJECT
  *              Dockerfile
@@ -38,13 +38,21 @@ var files = {
  *              package.json
  **/
 
-/**
- * Simple image optimization technique
- */
 gulp.task('default', function () {
-  return gulp.src(paths.client + assets.img + files.all)
-            .pipe(plugins.filelog())
-            .pipe(plugins.imagemin())
-            .pipe(gulp.dest(paths.build + assets.img))
-            .pipe(plugins.duration('Task duration'));
+  var searchSlug = paths.client + assets.js + files.js;
+
+  return gulp.src(searchSlug)
+    .pipe(plugins.filelog())
+    .pipe(plugins.plumber())
+    .pipe(plugins.concat('app.js'))
+    .on('error', plugins.util.log)
+    .pipe(plugins.size({"showFiles": true}))
+    .pipe(gulp.dest(paths.build + assets.js))
+    .pipe(plugins.uglify())
+    .on('error', plugins.util.log)
+    .pipe(plugins.rename({suffix: '.min'}))
+    .on('error', plugins.util.log)
+    .pipe(plugins.size({"showFiles": true}))
+    .pipe(gulp.dest(paths.build + assets.js))
+    .pipe(plugins.duration('Task duration'));
 });

@@ -1,23 +1,27 @@
 {
-  "name": "astro_transform_image_min",
+  "name": "astro_transform_cat_min",
   "version": "1.0.0",
-  "description": "Uses imagemin to shrink your images",
+  "description": "Concats all js files together then minifies the result. The output of this is 1 single js file",
   "main": "gulpfile.js",
   "scripts": {
-    "min_img": "gulp"
+    "catmin": "gulp"
   },
   "keywords": [
-    "imagemin",
+    "gulp-concat",
     "gulp"
   ],
   "author": "Mike Fielden",
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.8.11",
-    "gulp-load-plugins": "^0.10.0",
+    "gulp-concat": "^2.5.2",
     "gulp-duration": "0.0.0",
-    "gulp-imagemin": "^2.2.1",
     "gulp-filelog": "^0.4.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^1.2.1",
+    "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.5"
   }
 }

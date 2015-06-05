@@ -8,4 +8,4 @@ WORKDIR /src/astro_code
 
 RUN npm install
 
-ENTRYPOINT ["bash", "-c", "npm run min_img"]
+ENTRYPOINT ["bash", "-c", "npm run catmin"]
