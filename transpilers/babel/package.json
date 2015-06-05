@@ -20,7 +20,6 @@
     "gulp-duration": "0.0.0",
     "gulp-filelog": "^0.4.1",
     "gulp-util": "^3.0.5",
-    "run-sequence": "^1.1.0",
-    "yargs": "^3.10.0"
+    "run-sequence": "^1.1.0"
   }
 }

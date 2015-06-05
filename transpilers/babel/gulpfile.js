@@ -7,7 +7,9 @@ var plugins = require('gulp-load-plugins')();
 
 var run = require('run-sequence');
 
-var arg = require('yargs').argv;
+// WILL RUN SERVER ONLY - docker run -t -e "SERVER=true" -v $(pwd):/src/app IMAGENAME
+// WILL RUN ClENT ONLY - docker run -t -e "SERVER=true" -v $(pwd):/src/app IMAGENAME
+// WILL RUN BOTH - docker run -t -v $(pwd):/src/app cover_me IMAGENAME
 
 /**
  *  Folder structure looks like this on the container:
@@ -29,11 +31,11 @@ var arg = require('yargs').argv;
 gulp.task('default', function () {
 
   // check for server only flag
-  if (arg.server)
+  if (process.env.SERVER)
     return run('babel-server');
 
   // check for client only flag
-  if (arg.client)
+  if (process.env.CLIENT)
     return run('babel-client');
 
 
