@@ -7,4 +7,4 @@ gen
 
 linters/*/node_modules/
 testers/*/node_modules/
-transpiles/*/node_modules/
+transpilers/*/node_modules
