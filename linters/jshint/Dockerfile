@@ -3,10 +3,6 @@ FROM node:0.12
 
 RUN npm install jshint -g
 
-ADD ./ /src/astro_code
+RUN npm install jshint-stylish
 
-WORKDIR /src/astro_code
-
-RUN npm install
-
-ENTRYPOINT ["bash", "-c", "npm run --silent lint "]
+ENTRYPOINT ["bash", "-c", "jshint --reporter=/node_modules/jshint-stylish /src/app/**/*.js"]
