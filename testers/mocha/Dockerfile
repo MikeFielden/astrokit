@@ -1,11 +1,8 @@
+# INSTALL UBUNTU/Node
 FROM node:0.12
 
-RUN npm install gulp -g
+RUN npm install mocha -g
 
-ADD ./ /src/astro_code
+WORKDIR /src/app
 
-WORKDIR /src/astro_code
-
-RUN npm install
-
-ENTRYPOINT ["bash", "-c", "npm test"]
+ENTRYPOINT ["bash", "-c", "mocha"]
