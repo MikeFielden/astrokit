@@ -5,10 +5,9 @@ RUN npm install -g mocha babel
 
 RUN npm install chai sinon sinon-chai
 
-
 COPY ./setup.js .
-COPY ./controller.sh .
+COPY ./mocha.sh .
 
-RUN chmod +x controller.sh
+RUN chmod +x mocha.sh
 
-CMD ./controller.sh
+CMD ./mocha.sh
