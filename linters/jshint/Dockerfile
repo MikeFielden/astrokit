@@ -15,7 +15,4 @@ COPY ./.jshintrc /src/
 COPY ./jshint.sh jshint.sh
 RUN chmod +x jshint.sh
 
-COPY ./controller.sh controller.sh
-RUN chmod +x controller.sh
-
-CMD ./controller.sh
+CMD ./jshint.sh
