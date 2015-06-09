@@ -1,11 +1,13 @@
 # INSTALL UBUNTU/NODE
 FROM node:0.12
 
-RUN npm install mocha -g
+RUN npm install -g mocha babel
 
-RUN npm install mocha babel -g
+RUN npm install chai
 
-WORKDIR /src/app
+COPY ./setup.js .
 
-ENTRYPOINT ["bash", "-c"]
-CMD ["mocha --compilers js:babel/register"]
+COPY ./controller.sh .
+RUN chmod +x controller.sh
+
+CMD ./controller.sh
