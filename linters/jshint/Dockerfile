@@ -5,7 +5,7 @@ FROM node:0.12
 RUN apt-get update && apt-get install -y inotify-tools
 
 # INSTALL NODE MODULES
-RUN npm install -g jshint
+RUN npm install -g jshint watch
 RUN npm install jshint-stylish
 
 # COPY .JSHINTRC FILE ONE LEVEL UP FROM SRC/APP,
