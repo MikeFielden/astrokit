@@ -1,1 +1,1 @@
-mocha --compilers js:babel/register "./setup.js" "src/app/test"
+mocha --compilers js:babel/register "./setup.js" "/src/app/test"
