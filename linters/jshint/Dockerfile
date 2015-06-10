@@ -1,9 +1,6 @@
 # INSTALL UBUNTU / NODE / NPM
 FROM node:0.12
 
-#UPDATE APT-GET AND INSTALL DNOTIFY FOR DIRECTORY WATCHING
-RUN apt-get update && apt-get install -y inotify-tools
-
 # INSTALL NODE MODULES
 RUN npm install -g jshint watch
 RUN npm install jshint-stylish

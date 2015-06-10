@@ -1,11 +1,8 @@
 FROM node:0.12
 
-RUN npm install gulp -g
+RUN npm install babel -g
 
-ADD ./ /src/astro_code
+COPY ./babel.sh .
+RUN chmod +x babel.sh
 
-WORKDIR /src/astro_code
-
-RUN npm install
-
-ENTRYPOINT ["bash", "-c", "npm run transpile"]
+CMD ./babel.sh
