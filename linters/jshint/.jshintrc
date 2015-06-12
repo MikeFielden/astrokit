@@ -19,6 +19,7 @@
   "maxstatements" : 15,
   "maxcomplexity" : 10,
   "maxlen"        : 100,
+  "laxcomma"      : true,
 
   "asi"           : false,
   "boss"          : false,
